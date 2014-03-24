@@ -33,6 +33,7 @@
 namespace v8 {
 namespace internal {
 
+#pragma GCC diagnostic ignored "-Wuninitialized"
 
 AstTyper::AstTyper(CompilationInfo* info)
     : info_(info),
