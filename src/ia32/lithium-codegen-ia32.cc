@@ -444,6 +444,7 @@ bool LCodeGen::GenerateJumpTable() {
   return !is_aborted();
 }
 
+#pragma GCC diagnostic ignored "-Wuninitialized"
 
 bool LCodeGen::GenerateDeferredCode() {
   ASSERT(is_generating());
