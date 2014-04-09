@@ -213,7 +213,7 @@
             '<(generated_file)',
           ],
           'action': [
-            'python',
+            'python2.6',
             '../../tools/js2c.py',
             '<@(_outputs)',
             'TEST',  # type

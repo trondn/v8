@@ -85,7 +85,8 @@
           'conditions': [
             ['OS=="mac"', {
               'xcode_settings': {
-                'OTHER_LDFLAGS': ['-dynamiclib', '-all_load']
+                'OTHER_LDFLAGS': ['-dynamiclib', '-all_load'],
+                'DYLIB_INSTALL_NAME_BASE': '/opt/couchbase/lib'
               },
             }],
             ['soname_version!=""', {
@@ -938,7 +939,7 @@
             '<(SHARED_INTERMEDIATE_DIR)/libraries.cc',
           ],
           'action': [
-            'python',
+            'python2.6',
             '../../tools/js2c.py',
             '<@(_outputs)',
             'CORE',
@@ -957,7 +958,7 @@
             '<(SHARED_INTERMEDIATE_DIR)/experimental-libraries.cc',
           ],
           'action': [
-            'python',
+            'python2.6',
             '../../tools/js2c.py',
             '<@(_outputs)',
             'EXPERIMENTAL',
@@ -987,7 +988,7 @@
               '<(SHARED_INTERMEDIATE_DIR)/debug-support.cc',
             ],
             'action': [
-              'python',
+              'python2.6',
               '../../tools/gen-postmortem-metadata.py',
               '<@(_outputs)',
               '<@(heapobject_files)'
