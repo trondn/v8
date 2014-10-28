@@ -152,7 +152,7 @@
     ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" \
        or OS=="netbsd"', {
       'target_defaults': {
-        'cflags': [ '-Wall', '<(werror)', '-W', '-Wno-unused-parameter',
+        'cflags': [ '-W', '-Wno-unused-parameter',
                     '-pthread', '-fno-exceptions', '-pedantic' ],
         'cflags_cc': [ '-Wnon-virtual-dtor', '-fno-rtti' ],
         'ldflags': [ '-pthread', ],
