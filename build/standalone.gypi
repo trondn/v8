@@ -69,7 +69,7 @@
     'host_arch%': '<(host_arch)',
     'target_arch%': '<(target_arch)',
     'v8_target_arch%': '<(v8_target_arch)',
-    'werror%': '-Werror',
+    'werror%': '',
 
     # .gyp files or targets should set v8_code to 1 if they build V8 specific
     # code, as opposed to external code.  This variable is used to control such
@@ -129,7 +129,7 @@
         'conditions': [
           ['os_posix == 1 and OS != "mac"', {
             'cflags!': [
-              '-Werror',
+              '',
             ],
           }],
           ['OS == "mac"', {
@@ -152,7 +152,7 @@
     ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" \
        or OS=="netbsd"', {
       'target_defaults': {
-        'cflags': [ '-Wall', '<(werror)', '-W', '-Wno-unused-parameter',
+        'cflags': [ '-W', '-Wno-unused-parameter',
                     '-pthread', '-fno-exceptions', '-pedantic' ],
         'cflags_cc': [ '-Wnon-virtual-dtor', '-fno-rtti' ],
         'ldflags': [ '-pthread', ],
