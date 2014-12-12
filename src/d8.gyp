@@ -119,7 +119,7 @@
             '<(SHARED_INTERMEDIATE_DIR)/d8-js.cc',
           ],
           'action': [
-            'python2.6',
+            'python',
             '../tools/js2c.py',
             '<@(_outputs)',
             'D8',
